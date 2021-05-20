@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bespoke_packages",
+  "info": {
+    "name": "Packages"
+  },
+  "options": {
+    "draftAndPublish": true,
+    "timestamps": true,
+    "increments": true,
+    "comment": ""
+  },
+  "attributes": {
+    "sortOrder": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Restrictions": {
+      "type": "richtext"
+    },
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "BookNowLink": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    }
+  }
+}

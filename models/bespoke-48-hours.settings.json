@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bespoke_48_hours",
+  "info": {
+    "name": "48 Hours",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true,
+    "timestamps": true,
+    "increments": true,
+    "comment": ""
+  },
+  "attributes": {
+    "sortOrder": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "Name": {
+      "type": "string",
+      "private": false,
+      "required": true
+    },
+    "Photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "DayOne": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.forty-eight-hour-section"
+    },
+    "DayTwo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.forty-eight-hour-section"
+    }
+  }
+}

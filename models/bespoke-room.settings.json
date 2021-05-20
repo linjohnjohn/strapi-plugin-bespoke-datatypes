@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bespoke_rooms",
+  "info": {
+    "name": "Rooms",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true,
+    "timestamps": true,
+    "increments": true,
+    "comment": ""
+  },
+  "attributes": {
+    "sortOrder": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "Carousel": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "FeaturedImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "BookNowLink": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Amenities": {
+      "type": "richtext"
+    }
+  }
+}
